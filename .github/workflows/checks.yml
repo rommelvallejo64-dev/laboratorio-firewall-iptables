@@ -1,0 +1,14 @@
+name: Comprobaciones Bash
+on: [push, pull_request]
+jobs:
+  bash:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Revisar sintaxis sin aplicar reglas
+        run: |
+          for archivo in script1.sh script2.sh script3.sh; do
+            bash -n "$archivo" || exit 1
+          done
+      - name: Revisar scripts con ShellCheck
+        run: shellcheck script1.sh script2.sh script3.sh
