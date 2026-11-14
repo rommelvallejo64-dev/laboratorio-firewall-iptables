@@ -24,7 +24,7 @@ Se agregó comprobación de privilegios y disponibilidad de iptables, interrupci
 
 El estado ESTABLISHED/RELATED permite continuar conexiones ya existentes. Aplicar un perfil no revoca automáticamente conexiones previas ni reemplaza otras tablas o reglas IPv6. Las reglas se aplican en secuencia, no de manera atómica, y un fallo puede dejar un perfil parcial: usar una VM desechable y consola con recuperación.
 
-Se incluye un flujo de GitHub Actions para sintaxis Bash y ShellCheck sin aplicar reglas. Ese flujo todavía no se ha ejecutado en GitHub. La comprobación local de Bash no pudo arrancar por restricciones de permisos de Windows.
+Se incluye un flujo de GitHub Actions para sintaxis Bash y ShellCheck sin aplicar reglas. La revisión de sintaxis Bash y ShellCheck pasó en GitHub Actions. La comprobación local de Bash no pudo arrancar por restricciones de permisos de Windows.
 
 Documentar versiones de Linux e iptables, diagrama de interfaces, conectividad inicial, resultado de cada regla y recuperación. Las pruebas deben distinguir tráfico permitido y bloqueado, y verificar la dirección y cadena correspondientes. No se ejecutaron las reglas durante esta preparación.
 
